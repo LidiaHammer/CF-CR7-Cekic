@@ -1,0 +1,29 @@
+<h1>Checkout</h1>
+<br>
+<h3>Your yourney is ready .. </h3>
+
+<div class="cart-item my-2" *ngFor="let item of items">
+    <span> {{ item.destination }} </span>
+    <span> {{ item.price }} €</span>
+</div>
+<br>
+<form [formGroup]="checkoutForm" (ngSubmit)="onSubmit(checkoutForm.value)">
+
+    <div>
+        <label for="name" class="mr-3">
+     Name
+   </label>
+        <input id="name" type="text" formControlName="name">
+    </div>
+    <br>
+    <div>
+        <label for="address" class="mr-3">
+     Address
+   </label>
+
+        <input id="address" type="text" formControlName="address">
+    </div>
+    <br>
+    <button class="button btn btn-success" type="submit">Purchase</button>
+    <br> <br> <br>
+</form>

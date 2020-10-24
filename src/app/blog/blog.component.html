@@ -1,0 +1,11 @@
+<h2 class="display-4 my-5">Read about travelers expereinces</h2>
+
+<div *ngFor="let blogs of blogsContent" class="my-5">
+
+    <h3 class="display-5">
+        {{ blogs.title }}
+    </h3>
+    <p class="">{{ blogs.text }}</p>
+    <p class="">{{ blogs.publishDate }}</p>
+
+</div>

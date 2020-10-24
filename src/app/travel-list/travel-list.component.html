@@ -1,0 +1,15 @@
+<h2 class="display-4 text-center mt-5 mb-3">
+    Travel Offers </h2>
+<div class="row justify-content-around ">
+    <div *ngFor="let offers of travelOffers ; index as offersId" class="card col-12 col-md-5 m-3 shadow p-3 mb-5 bg-white rounded border-0" style="width: 18rem;">
+        <img class="card-img-top mt-3 shadow-sm p-3 mb-3 bg-white rounded " src=" {{ offers.img }} " alt="Card image cap">
+        <div class="card-body">
+            <p class="card-text text-center"> {{ offers.destination }}</p>
+            <p class="card-text d-none d-md-block "> {{ offers.description }}</p>
+            <p class="card-text "> Duration: {{ offers.duration }}</p>
+            <p class="card-text "> Starting Date: {{ offers.startDate }}</p>
+            <p class="card-text "> Price Allinclusive: {{ offers.price }} € </p>
+            <p><a class="btn btn-outline-secondary btn-lg " [routerLink]="['/travelOffers', offersId]" role="button">View more</a></p>
+        </div>
+    </div>
+</div>

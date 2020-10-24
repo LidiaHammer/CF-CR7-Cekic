@@ -1,0 +1,30 @@
+<div class="container -m5">
+    <div>
+        <h1>Your perfect journey starts here ..</h1>
+        <br>
+        <form [formGroup]="info">
+            <div class="form-row">
+                <div class="col-12 mb-4">
+                    <input type="text" class="form-control shadow p-4 bg-white rounded border-0" formControlName="destination" placeholder="Where would you like to travel to?">
+                </div>
+                <div class="col-6 mb-4 ">
+                    <input type="text" class="form-control shadow p-4  bg-white rounded border-0" formControlName="startigDate" placeholder="startig Date">
+                </div>
+                <div class="col-6 mb-4">
+                    <input type="text" class="form-control shadow p-4  bg-white rounded border-0" formControlName="endingDate" placeholder="ending Date">
+                </div>
+                <div class="col-6 mb-4">
+                    <input type="text" class="form-control shadow p-4  bg-white rounded border-0" formControlName="HowMany" placeholder="How many travelers?">
+                </div>
+                <div class="col-6 mb-4">
+                    <input type="text" class="form-control shadow p-4  bg-white rounded border-0" formControlName="maxPrice" placeholder="maximum price">
+                </div>
+                <div class="col"><button (click)="onSubmit()" class="btn btn-outline-secondary shadow-sm  rounded" type="submit">Search</button></div>
+
+            </div>
+        </form>
+    </div>
+
+
+    <app-travel-list></app-travel-list>
+</div>
